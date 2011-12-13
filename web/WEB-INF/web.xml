@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <context-param>
+        <param-name>coffee_price</param-name>
+        <param-value>18.50</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sugar_price</param-name>
+        <param-value>6.95</param-value>
+    </context-param>
+    <context-param>
+        <param-name>water_price</param-name>
+        <param-value>1.29</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>cookies</servlet-name>
+        <servlet-class>cookies</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>remove</servlet-name>
+        <servlet-class>remove</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookies</servlet-name>
+        <url-pattern>/cookies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>remove</servlet-name>
+        <url-pattern>/remove</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
